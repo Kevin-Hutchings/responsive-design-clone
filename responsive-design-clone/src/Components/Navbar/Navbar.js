@@ -1,15 +1,15 @@
 import React from 'react';
-import './Header.css'
+import './Navbar.css'
 
-export default function Header() {
+export default function Navbar({ links }) {
    return(
-      <header>
+      <nav>
          <h1> Start Bootstrap </h1>
-         <ul className="header-list">
+         <ul className="nav-list">
             {links.map((el) => {
                return <li> {el} </li>
-            })};
+            })}
          </ul>
-      </header>
+      </nav>
    )
 }

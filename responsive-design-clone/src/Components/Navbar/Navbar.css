@@ -1,4 +1,4 @@
-header {
+nav {
    width: 100vw;
    display: flex;
    flex-direction: row;
@@ -7,7 +7,7 @@ header {
    color: teal;
 }
 
-.header-list {
+.nav-list {
    border: 1px solid white;
    color: white;
    width: 45vw;
@@ -16,4 +16,9 @@ header {
    flex-wrap: row nowrap;
    justify-content: space-evenly;
    align-items: center;
+}
+
+li:hover {
+   color: teal;
+   cursor: pointer;
 }
