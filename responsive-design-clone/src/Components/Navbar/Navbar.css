@@ -1,16 +1,37 @@
-nav {
-   width: 100vw;
+.navbar {
+   width: 100%;
+   height: 7vh;
+   padding: 15px;
    display: flex;
    flex-direction: row;
-   border: 1px solid white;
    justify-content: space-around;
    color: teal;
+   align-items: center;
+   position: sticky;
+   top: 0;
+}
+
+.scroll {
+   background-color: #1b1b1b;
+   transition: 650ms;
+   padding: 5px;
+}
+
+nav:hover {
+   border: 1px solid white;
+}
+
+.nav-img {
+   width: 8vw;
+   height: 5vh;
+   position: relative;
+   left: 5%;
+   cursor: pointer;
 }
 
 .nav-list {
-   border: 1px solid white;
    color: white;
-   width: 45vw;
+   width: 30vw;
    list-style: none;
    display: flex;
    flex-wrap: row nowrap;
@@ -18,7 +39,11 @@ nav {
    align-items: center;
 }
 
+.nav-list:hover {
+   border: 1px solid white;
+}
+
 li:hover {
-   color: teal;
+   color: #dab315;
    cursor: pointer;
 }

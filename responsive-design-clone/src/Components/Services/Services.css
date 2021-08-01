@@ -1,0 +1,16 @@
+.services {
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   height: 50vh;
+   line-height: 10px;
+}
+
+.services-title {
+   font-size: 3em;
+}
+
+.services-text {
+   font-style: italic;
+   font-size: larger;
+}

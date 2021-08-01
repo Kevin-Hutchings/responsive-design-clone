@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Header from './Components/Header/Header';
+import Services from './Components/Services/Services';
 import './App.css';
 
 export default class App extends Component {
@@ -17,6 +18,7 @@ export default class App extends Component {
     return (
       <div className="App">
         <Header links={headerLinks} />
+        <Services />
       </div>
     )
   }
