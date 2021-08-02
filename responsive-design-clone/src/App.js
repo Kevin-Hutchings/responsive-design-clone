@@ -9,10 +9,7 @@ export default class App extends Component {
 
     this.state = {
       headerLinks: ['SERVICES', 'PORTFOLIO', 'ABOUT', 'ITEM', 'CONTACT'],
-      isMenuOpen: false,
     }
-
-    // this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   render(){
