@@ -8,8 +8,8 @@ export default function Header({ links }) {
          <Navbar links={links} />
          <span className="welcome-text">
             <h3> Welcome To Our Studio! </h3>
-            <h1> IT'S NICE TO MEET YOU </h1>
-            <button> TELL ME MORE </button>
+            <h1>IT'S NICE TO MEET YOU</h1>
+            <button className="header-button"> TELL ME MORE </button>
          </span>
       </header>
    )

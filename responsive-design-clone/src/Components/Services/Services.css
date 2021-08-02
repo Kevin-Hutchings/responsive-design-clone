@@ -14,3 +14,35 @@
    font-style: italic;
    font-size: larger;
 }
+
+.products-container {
+   display: flex;
+   flex-direction: row;
+   margin: 20px;
+}
+
+.products {
+   margin: 5vh 2vh;
+   display: flex;
+   flex-flow: column nowrap;
+   align-items: center;
+   justify-content: space-around;
+   width: 20vw;
+   line-height: 25px;
+   text-align: center;
+}
+
+.products-text {
+   color: rgb(95, 94, 94);
+}
+
+@media (max-width: 770px) {
+   .products-container {
+      flex-flow: column nowrap;
+   }
+
+   .products {
+      width: 50vw;
+      margin: 2vh;
+   }
+}

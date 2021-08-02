@@ -19,7 +19,7 @@ export default class Navbar extends Component {
    }
 
    handleScroll() {
-      if (window.scrollY > 20) {
+      if (window.scrollY > 40) {
          document.querySelector(".navbar").className = "navbar scroll";
       } else {
          document.querySelector(".navbar").className = "navbar";
@@ -35,6 +35,7 @@ export default class Navbar extends Component {
                   return <li> {el} </li>
                })}
             </ul>
+            <button className="nav-button"> MENU </button>
          </nav>
       )
    }

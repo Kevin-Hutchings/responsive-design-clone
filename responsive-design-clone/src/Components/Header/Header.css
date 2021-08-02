@@ -1,11 +1,12 @@
 .header {
    background-image: url(https://startbootstrap.github.io/startbootstrap-agency/assets/img/header-bg.jpg);
    background-repeat: no-repeat;
-   background-size: 105%;
+   background-size: cover;
    background-position: 25%;
    height: 65vh;
    padding: 10px;
    margin-bottom: 3%;
+   margin-left: -1%;
 }
 
 .welcome-text {
@@ -18,20 +19,29 @@
    margin-top: 5%;
    font-size: 2em;
    line-height: 5%;
-   font-style: bold;
 }
 
-button {
+.header-button {
    border: none;
-   margin-top: 5%;
+   margin-top: 3%;
    background-color: #fecc00;
    color: white;
-   width: 15vw;
-   height: 8vh;
+   width: 200px;
+   height: 75px;
    border-radius: 5px;
+   font-size: 15px;
 }
 
-button:hover {
+.header-button:hover {
    cursor: pointer;
    background-color: #dab315;
+}
+
+@media (max-width: 770px) {
+   .header {
+      height: 40vh;
+   }
+   .welcome-text {
+      font-size: 1.5em;
+   }
 }
