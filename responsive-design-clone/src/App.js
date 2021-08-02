@@ -8,13 +8,16 @@ export default class App extends Component {
     super();
 
     this.state = {
-      headerLinks: ['SERVICES', 'PORTFOLIO', 'ABOUT', 'ITEM', 'CONTACT']
-    };
+      headerLinks: ['SERVICES', 'PORTFOLIO', 'ABOUT', 'ITEM', 'CONTACT'],
+      isMenuOpen: false,
+    }
+
+    // this.toggleMenu = this.toggleMenu.bind(this);
   }
 
   render(){
     const {headerLinks} = this.state;
-    
+        
     return (
       <div className="App">
         <Header links={headerLinks} />

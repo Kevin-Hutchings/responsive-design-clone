@@ -6,18 +6,15 @@
    flex-direction: row;
    justify-content: space-around;
    align-items: center;
-   position: sticky;
+   position: fixed;
    top: 0;
+   margin-left: -1%;
 }
 
 .scroll {
    background-color: #1b1b1b;
    transition: 650ms;
    padding: 5px;
-}
-
-nav:hover {
-   border: 1px solid white;
 }
 
 .nav-img {
@@ -38,10 +35,6 @@ nav:hover {
    align-items: center;
 }
 
-.nav-list:hover {
-   border: 1px solid white;
-}
-
 li:hover {
    color: #dab315;
    cursor: pointer;
@@ -50,6 +43,38 @@ li:hover {
 .nav-button {
    display: none;
 }
+
+menu {
+   color: white;
+   background-color: #1b1b1b;
+   position: fixed;
+   height: 15vh;
+   width: 110vw;
+   overflow: hidden;
+   margin-top: 12%;
+   margin-left: -2%;
+   top: 0;
+   padding: 0;
+   top: -500px;
+   transition-property: top;
+   transition-duration: 750ms;
+}
+
+.menu-open {
+   top: 0;
+   display: block;
+}
+
+.menu-text {
+   display: block;
+   list-style: none;
+   line-height: 25px;
+}
+
+.hidden {
+   display: none;
+}
+
 
 @media (max-width: 1585px) {
    .nav-list {
@@ -64,6 +89,9 @@ li:hover {
 }
 
 @media (max-width: 991px) {
+   .navbar {
+      background-color: #1b1b1b;
+   }
    .nav-list {
       display: none;
    }

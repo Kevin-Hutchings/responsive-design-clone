@@ -3,10 +3,10 @@
    background-repeat: no-repeat;
    background-size: cover;
    background-position: 25%;
+   overflow: hidden;
    height: 65vh;
    padding: 10px;
    margin-bottom: 3%;
-   margin-left: -1%;
 }
 
 .welcome-text {
@@ -16,7 +16,7 @@
    align-items: center;
    justify-content: space-around;
    width: 100vw;
-   margin-top: 5%;
+   margin-top: 10%;
    font-size: 2em;
    line-height: 5%;
 }
@@ -35,6 +35,12 @@
 .header-button:hover {
    cursor: pointer;
    background-color: #dab315;
+}
+
+@media (max-width: 991px) {
+   .welcome-text {
+      margin-top: 15%;
+   }
 }
 
 @media (max-width: 770px) {

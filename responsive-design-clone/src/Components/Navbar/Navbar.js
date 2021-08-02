@@ -5,9 +5,12 @@ export default class Navbar extends Component {
    constructor(props){
       super(props);
 
-      this.state = {};
+      this.state = {
+         isMenuOpen: false,
+      };
 
       this.handleScroll = this.handleScroll.bind(this);
+      this.toggleMenu = this.toggleMenu.bind(this);
    }
 
    componentDidMount() {
@@ -26,17 +29,34 @@ export default class Navbar extends Component {
       }
    };
 
+   toggleMenu() {
+      const {isMenuOpen} = this.state;
+      this.setState({ isMenuOpen: !isMenuOpen })
+   }
+
    render(){
+      const {links} = this.props;
+      const {isMenuOpen} = this.state;
+      const menuClass = isMenuOpen ? 'menu-open' : '';
       return(
-         <nav className='navbar'>
-            <img className='nav-img' src='https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg' alt='start bootstrap logo' />
-            <ul className="nav-list">
-               {this.props.links.map((el) => {
-                  return <li> {el} </li>
-               })}
-            </ul>
-            <button className="nav-button"> MENU </button>
-         </nav>
+         <div>
+            <nav className='navbar'>
+               <img className='nav-img' src='https://startbootstrap.github.io/startbootstrap-agency/assets/img/navbar-logo.svg' alt='start bootstrap logo' />
+               <ul className="nav-list">
+                  {links.map((el) => {
+                     return <li> {el} </li>
+                  })}
+               </ul>
+               <button className="nav-button" onClick={this.toggleMenu}> MENU </button>
+            </nav>
+            <menu className={menuClass}>
+               <ul className={isMenuOpen ? 'menu-text': 'hidden'}>
+                  {links.map((el) => {
+                     return <li> {el} </li>
+                  })}
+               </ul>
+            </menu>
+         </div>
       )
    }
 }
