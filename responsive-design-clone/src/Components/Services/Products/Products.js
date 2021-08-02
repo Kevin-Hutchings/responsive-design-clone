@@ -1,23 +1,20 @@
 import React from 'react';
+import data from './data';
 
 export default function Products() {
+   const mappedProducts = data.map((data) => {
+      return(
+         <div className="products">
+            <img src={data.img} alt="placeholder" />
+            <h1> {data.title} </h1>
+            <h3 className='products-text'> {data.description} </h3>
+         </div>
+      )
+   });
+
    return (
       <div className="products-container">
-         <div className="products">
-            <img src='https://via.placeholder.com/150' alt="placeholder" />
-            <h1> E-Commerce </h1>
-            <h3 className='products-text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. </h3>
-         </div>
-         <div className="products">
-            <img src='https://via.placeholder.com/150' alt="placeholder" />
-            <h1> Responsive Design </h1>
-            <h3 className='products-text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. </h3>
-         </div>
-         <div className="products">
-            <img src='https://via.placeholder.com/150' alt="placeholder" />
-            <h1> Web Security </h1>
-            <h3 className='products-text'> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit. </h3>
-         </div>
+         {mappedProducts}
       </div>
    )
 }
