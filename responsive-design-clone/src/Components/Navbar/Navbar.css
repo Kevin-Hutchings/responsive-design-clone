@@ -48,10 +48,10 @@ menu {
    color: white;
    background-color: #1b1b1b;
    position: fixed;
-   height: 15vh;
+   height: 17vh;
    width: 110vw;
    overflow: hidden;
-   margin-top: 12%;
+   margin-top: 10%;
    margin-left: -2%;
    top: 0;
    padding: 0;
@@ -119,5 +119,11 @@ menu {
 
    .nav-button:focus {
       border: 3px solid white;
+   }
+}
+
+@media (max-width: 770px) {
+   menu {
+      margin-top: 12%;
    }
 }
